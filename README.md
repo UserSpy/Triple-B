@@ -1,0 +1,2 @@
+# Triple-B
+Do you have old equipment and books that you want to clear out? Are there other people who would pay money for it? Triple B lets you post your items. Then people see your what you’re offering. They can make offers, and you can contact them safely. It’s especially safe because only Titans have access to it, and you can see their ratings! If you’re a browser, you’ll love it. You can browse by category or see recently posted items. Bid with confidence because the best sellers have the best ratings!
