@@ -1,0 +1,26 @@
+/* This is a font style I ripped off, Only temporary we can change this later */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Open+Sans&family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+/* How CSS works is that "*" ".class-name" and tags like "h1" are affected with the corresponding {} attributes */
+* { /* The star refers to all items in the html file */
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    justify-content: center;
+    padding: 20px 24px; /* the first number represents the x-axis, the 2nd is the y-axis*/
+    display: flex;
+}
+
+.home h2 {
+    font-size: 24px;
+    color: Orange;
+}
+/*Feel free to play around with the bottom piece to get a feel for how stuff looks and plays*/
+.home p {
+    color: darkblue; /*Also takes hex codes instead of words*/
+    border: 10px;
+    margin: 50px;
+    padding: 15px 30px;
+}
