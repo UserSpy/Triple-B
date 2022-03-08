@@ -4,18 +4,51 @@
 /* How CSS works is that "*" ".class-name" and tags like "h1" are affected with the corresponding {} attributes */
 * { /* The star refers to all items in the html file */
     font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-    font-size: 32px;
-    justify-content: center;
-    padding: 20px 24px; /* the first number represents the x-axis, the 2nd is the y-axis*/
-    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: #FF7900;
 }
 
 .home h2 {
     font-size: 24px;
-    color: Orange;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #00274C;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    
+}
+nav .action {
+    color: #FF7900;
+    font-weight: 700;
+    border-style: inset;
+    border-radius: 10px;
+    padding: 8px 16px;
+    transition: .25s ease-in-out;
+}
+
+nav .action:hover {
+    color: #00274C;
+    background-color: #FF7900;
+    border-style: outset;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    padding: 0px 16px;
+}
+.init h1 {
+    font-size: 25px;
+}
+.nav-right {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 32px;
+    font-size: 20px;
+    font-weight: 500;
 }
 /*Feel free to play around with the bottom piece to get a feel for how stuff looks and plays*/
 .home p {
