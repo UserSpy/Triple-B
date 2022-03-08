@@ -7,20 +7,61 @@
 }
 
 h1 {
-    font-size: 32px;
-    justify-content: center;
-    padding: 20px 24px; /* the first number represents the x-axis, the 2nd is the y-axis*/
-    display: flex;
+  font-size: 40px;
+  justify-content: center;
+  padding: 20px 24px; /* the first number represents the x-axis, the 2nd is the y-axis*/
+  display: flex;
+  color: #084B8A;
 }
 
 .home h2 {
     font-size: 24px;
     color: Orange;
 }
-/*Feel free to play around with the bottom piece to get a feel for how stuff looks and plays*/
+
 .home p {
-    color: darkblue; /*Also takes hex codes instead of words*/
-    border: 10px;
-    margin: 50px;
-    padding: 15px 30px;
+  color: darkblue; /*Also takes hex codes instead of words*/
+  border: 10px;
+  margin: 50px;
+  padding: 15px 30px;
+}
+
+/* Creates a card object. */
+.card {
+  width: 320px;
+  height: 140px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 5px;
+  padding: 4px;
+}
+
+/* Organizes the cards into rows. */
+.three-cards {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px 20px 30px;
+}
+
+/* Used to resize the icons inside of the cards. */
+.icon-image {
+  width: 100px;
+  height: 100px;
+  padding: 10px 10px 10px 10px;
+}
+
+/* Class for cards' heading */
+.card-headings h2{
+  font-size: 18px;
+  text-align: left;
+  color: Orange;
+  padding-left: 75px;
+}
+
+/* Class for formatting an unordered list in a card */
+.card-list {
+  list-style-type: none;
+  font-size: 16px;
+  text-align: left;
+  padding-bottom: 40px;
 }
