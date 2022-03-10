@@ -8,16 +8,18 @@
     text-decoration: none;
     color: #FF7900;
 }
-
-.home h2 {
-    font-size: 24px;
+body {
+    margin: 0;
 }
+
 nav {
     display: flex;
     justify-content: center;
     background-color: #00274C;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    
+    box-shadow: 0px 4px 20px 1em rgba(0, 0, 0, 0.15);
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 nav .action {
     color: #FF7900;
@@ -51,9 +53,15 @@ nav .action:hover {
     font-weight: 500;
 }
 /*Feel free to play around with the bottom piece to get a feel for how stuff looks and plays*/
+.home {
+    
+    margin-top: 10%;
+}
 .home p {
     color: darkblue; /*Also takes hex codes instead of words*/
     border: 10px;
-    margin: 50px;
     padding: 15px 30px;
+}
+.home h2 {
+    font-size: 24px;
 }
