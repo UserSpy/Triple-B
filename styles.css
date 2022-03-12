@@ -8,6 +8,7 @@
     text-decoration: none;
     color: #FF7900;
 }
+
 body {
     margin: 0;
 }
@@ -36,6 +37,45 @@ nav .action:hover {
     border-style: outset;
 }
 
+/* Creates a card object. */
+.card {
+  width: 320px;
+  height: 140px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 5px;
+  padding: 4px;
+}
+
+/* Organizes the cards into rows. */
+.three-cards {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px 20px 30px;
+}
+
+/* Used to resize the icons inside of the cards. */
+.icon-image {
+  width: 100px;
+  height: 100px;
+  padding: 10px 10px 10px 10px;
+}
+
+/* Class for cards' heading */
+.card-headings h2{
+  font-size: 18px;
+  text-align: left;
+  color: Orange;
+  padding-left: 75px;
+}
+
+/* Class for formatting an unordered list in a card */
+.card-list {
+  list-style-type: none;
+  font-size: 16px;
+  text-align: left;
+  padding-bottom: 40px;
+  
 nav .underline {
     position: relative;
 }
