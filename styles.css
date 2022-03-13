@@ -118,7 +118,7 @@ nav .underline:hover::after {
 }
 /* HERO SECtION */
 .hero {
-    
+
     margin-top: 4%;
 }
 .hero p {
@@ -202,7 +202,7 @@ nav .underline:hover::after {
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 1em;
     grid-auto-rows: minmax(50px, auto);
-    
+
 }
 
 .scroller-grid > p {
