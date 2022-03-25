@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Open+Sans&family=Roboto:ital,wght@0,400;1,300&display=swap");
+
+/* How CSS works is that "*" ".class-name" and tags like "h1" are affected with the corresponding {} attributes */
+* {
+  /* The star refers to all items in the html file */
+  font-family: "Open Sans", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  color: #ff7900;
+}
+/* NAV BAR */
+nav {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  background-color: #00274c;
+  box-shadow: 0px 4px 20px 1em rgba(0, 0, 0, 0.15);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+nav .action {
+  color: #ff7900;
+  font-weight: 700;
+  border-style: inset;
+  border-radius: 10px;
+  padding: 8px 16px;
+  transition: 0.25s ease-in-out;
+}
+
+nav .action:hover {
+  color: #00274c;
+  background-color: #ff7900;
+  border-style: outset;
+}
+
+/* Creates a card object. */
+.card {
+  width: 320px;
+  height: 140px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 5px;
+  padding: 4px;
+}
+
+/* Organizes the cards into rows. */
+.three-cards {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px 20px 30px;
+}
+
+/* Used to resize the icons inside of the cards. */
+.icon-image {
+  width: 100px;
+  height: 100px;
+  padding: 10px 10px 10px 10px;
+}
+
+/* Class for cards' heading */
+.card-headings h2 {
+  font-size: 18px;
+  text-align: left;
+  color: Orange;
+  padding-left: 75px;
+}
+
+/* Class for formatting an unordered list in a card */
+.card-list {
+  list-style-type: none;
+  font-size: 16px;
+  text-align: left;
+  padding-bottom: 40px;
+}
+nav .underline {
+  position: relative;
+}
+
+nav .underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff7900;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.25s ease-in-out;
+}
+
+nav .underline:hover::after {
+  visibility: visible;
+  transform: scaleX(0.85);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  padding: 0px 16px;
+}
+.init h1 {
+  font-size: 25px;
+}
+.nav-right {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 32px;
+  font-size: 20px;
+  font-weight: 700;
+}
