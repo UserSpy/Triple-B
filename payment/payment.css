@@ -1,0 +1,44 @@
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.payment-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 60%;
+    height: 50%;
+}
+
+.opt-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+    padding: 5em;
+}
+
+.opt-wrapper .title {
+    /* display: grid;
+    grid-row-start: 3;
+    grid-row-end: 4; */
+    color: red;
+}
+
+.cash {
+    background-color: #00A878;
+    border: #02976d 5px solid;
+    border-radius: 20px;
+    
+}
+
+.credit {
+    background-color: #006DAA;
+    border: #015b90 5px solid;
+    border-radius: 20px;
+    /* height: 5em; */
+}
+
+
