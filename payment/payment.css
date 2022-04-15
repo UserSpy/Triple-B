@@ -13,18 +13,37 @@
     height: 50%;
 }
 
+.payment-container h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+}
+
 .opt-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5em;
-    padding: 5em;
+    padding: 2em 8em;
 }
 
-.opt-wrapper .title {
-    /* display: grid;
-    grid-row-start: 3;
-    grid-row-end: 4; */
-    color: red;
+.opt-wrapper a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opt-wrapper button {
+    padding: 4em 9em;
+    transition: all 300ms;
+}
+
+.opt-wrapper button:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 10px 8px grey;
 }
 
 .cash {
