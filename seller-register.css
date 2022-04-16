@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Open+Sans&family=Roboto:ital,wght@0,400;1,300&display=swap');
+@import "styles.css";
+
+.register-title {
+  color: Red;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 48px;
+}
+
+.form-style {
+  font-size: 20px;
+  width: 100%;
+  background-color: White;
+  margin: 20px 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-style: solid;
+  border-color: Black;
+}
+
+label {
+  font-size: 20px;
+  color: Black;
+}
+
+input {
+  background-color: white;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+
+input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: Black;
+  font-size: 20px;
+}
+
+select {
+  font-size: 20px;
+}
+
+input:focus {
+  background-color: lightblue;
+}
+
+input[type=submit] {
+  background-color: green;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 40px 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: Red;
+}
