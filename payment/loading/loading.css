@@ -43,7 +43,7 @@ body {
 }
 
 .active {
-    transform: scale(1.6);
+    transform: scale(1.1);
     color: red;
     
 }

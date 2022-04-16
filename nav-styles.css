@@ -35,6 +35,7 @@ nav .action:hover {
   border-style: outset;
 }
 
+<<<<<<< HEAD
 /* Adds animation to the Buy Borrow Books Title */
 
 nav .init h1 {
@@ -45,6 +46,8 @@ nav .init h1:hover {
   transform: scale(1.1);
   text-shadow: 2px 2px black;
 }
+=======
+>>>>>>> 90553f0ea27cf398d49558900404846d3cd1864b
 /* Creates a card object. */
 .card {
   width: 320px;
