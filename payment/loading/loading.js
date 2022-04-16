@@ -32,4 +32,4 @@ setInterval(() => {
         word1.classList.toggle("active");
         counter++;
     }
-}, 1000);
+}, 550);

@@ -42,7 +42,7 @@
 }
 
 .opt-wrapper button:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
     box-shadow: 5px 10px 8px grey;
 }
 

@@ -4,31 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Enter Credit Card Information</title>
     <link rel="stylesheet" href="credit.css">
 </head>
 <body>
     <div class="background">
         <div class="credit-container">
-            <form action="">
-                <label for="cardName">Enter Full Name on Card</label>
-                <input type="text">
-
-                <label for="cardNumber">Enter card number</label>
-                <input type="text">
-
-                <label for="ccv">Enter CCV number (on the back)</label>
-                <input type="text">
-                <div class="data">
-                    <label for="expiration">Enter experiation data</label>
-                    <input type="text">
+            <form action="" >
+                <div class="item box1">
+                    <label for="cardName">Enter Full Name on Card</label>
                     <input type="text">
                 </div>
-               
+                
+                <div class="item box2">
+                    <label for="cardNumber">Enter card number</label>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <label for="ccv">Enter CCV number (on the back)</label>
+                    <input type="text">
+                </div>
 
+                <div class="item data">
+                    <label for="expiration">Enter experiation data</label>
+                    <div class="data-input">
+                        <input type="text">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="item">
+                    <input class="submitBtn" type="button" value="submit" onclick="sendToLoading()">
+                </div>
             </form>
-            <a href="../loading/loading.html"><button>submit</button></a>
+           
         </div>
     </div>
+    <script>
+        let loading = "http://127.0.0.1:5500/payment/loading/loading.html";
+
+        function sendToLoading() {
+            window.location = loading;
+        }
+    </script>
 </body>
 </html>
