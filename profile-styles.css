@@ -6,6 +6,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+  background-image: none;
+}
+
 .profile-title {
   font-size: 40px;
   justify-content: center;
@@ -17,6 +21,13 @@
 .home h2 {
     font-size: 24px;
     color: Orange;
+}
+
+h3 {
+  color: Red;
+  padding-left: 100px;
+  font-size: 40px;
+  text-align: center;
 }
 
 .home p {
@@ -41,7 +52,8 @@
 .three-cards {
   display: flex;
   flex-direction: row;
-  padding: 20px 20px 20px 100px;
+  padding: 20px 60px 20px 100px;
+  background-color: lightblue;
 }
 
 /* Used to resize the icons inside of the cards. */
