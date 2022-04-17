@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Open+Sans&family=Roboto:ital,wght@0,400;1,300&display=swap");
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-image: url(../../images/homepage\ bg.jpg);
+    background-size: cover;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+
+.credit-container {
+    background-color: white;
+    border-radius: 20px;
+    width: 1000px;
+    height: 450px;
+    padding: 32px;
+}
+
+.credit-container form {
+    /* font-size: 28px; */
+    /* padding: 15px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    gap: 10px;
+}
+
+.box1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.box2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.item {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item input {
+    font-size: 18px;
+    padding: 5px 10px;
+    box-shadow: 3px 6px rgba(128, 128, 128, 0.25);
+    transition: all 300ms;
+}
+
+.item input:hover {
+    box-shadow: 5px 10px rgba(128, 128, 128, 0.25);
+}
+
+.data-input {
+    display: flex;
+    gap: 15px;
+}
+
+.submitBtn {
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #00274c;
+    color: #ff7900;
+    transition: all 300ms;
+}
+
+.submitBtn:hover {
+    box-shadow: 5px 10px rgba(128, 128, 128, 0.25);
+}

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Tripple B Login</title>
     <link rel="stylesheet" href="login.css">
+    <!-- <link rel="stylesheet" href="nav-styles.css"> -->
   </head>
   <body>
     <h1>Tripple B, CS students save the bookstore</h1>
@@ -32,7 +33,7 @@
                 <div class="LoginBox" id="content" role="main">
 
 <!-- begin login form -->
-               <form name="loginForm" action="/idp/profile/SAML2/Redirect/SSO?execution=e3s1" method="post" id="Form1" role="form">
+               <form name="loginForm" action=verify.php method="POST" id="Form1" role="form">
 
                      <div class="form-element-wrapper">
 Login
@@ -67,7 +68,9 @@ Login
 
                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="Help">Need help logging in?</a>
 
-
+               <!-- Prompt User to Sign Up If They Do Not Have an Account Yet -->
+               <h2> Not a member yet? </h2>
+               <a href="register.php">Sign Up</a>
             </div>
 
 
@@ -110,7 +113,6 @@ function closeForm() {
 }
 </script>
 </div>
-
 
     <footer>
     </footer>

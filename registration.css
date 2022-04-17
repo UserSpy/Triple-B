@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Open+Sans&family=Roboto:ital,wght@0,400;1,300&display=swap');
+@import "styles.css";
+
+* { /* The star refers to all items in the html file */
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.signup-header {
+  color: Red;
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 40px;
+  justify-content: center;
+  padding: 75px 24px;
+  display: flex;
+  color: #084B8A;
+}
+
+.home h2 {
+    font-size: 24px;
+    color: Orange;
+}
+
+h3 {
+  color: Black;
+  font-size: 18px;
+}
+.home p {
+  color: darkblue; /*Also takes hex codes instead of words*/
+  border: 10px;
+  margin: 50px;
+  padding: 15px 30px;
+}
+
+input[type=submit] {
+  background-color: green;
+  border: none;
+  color: white;
+  text-decoration: none;
+  margin: 40px 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: Red;
+}
+
+.containers {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-width: 10px;
+  border-color: Orange;
+  border-style: double;
+  width: 500px;
+  float: left;
+  display: flex;
+  margin-left: 100px;
+  margin-bottom: 100px;
+  align-items: center;
+  justify-content: center
+}
+
+input {
+  background-color: white;
+  width: 100%;
+  padding: 12px 20px;
+  padding-left: 100px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+  color: Black;
+}
+
+
+input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  background-color: lightblue;
+}
