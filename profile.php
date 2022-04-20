@@ -1,5 +1,6 @@
 <?php
   session_start();
+  error_reporting(E_ALL); ini_set('display_errors', 1);
   if (!$_SESSION["loggedIn"]) {
     header("Location: login.html");
   }
@@ -31,8 +32,11 @@
     <br></br>
     <br></br>
     <?php
-      $firstname = $_SESSION['fname'];
-      echo "<h3> Welcome,  {$firstname}!</h3>";
+      $result = mysqli_query($conn, "SELECT FirstName FROM Users WHERE  Username='".$_SESSION['username']."'");
+
+    $row = $result->fetch_assoc();
+
+    echo "<h3> Welcome,  {$row['FirstName']}!</h3>";
     ?>
 
     <div class="three-cards" style="width:1000px; margin:0 auto;">
@@ -175,9 +179,12 @@
           <?php
             $result = mysqli_query($conn, "SELECT * FROM Sellers WHERE Username='".$_SESSION['username']."'");;
             if (!mysqli_num_rows($result)) {
+              $_SESSION["seller-loggedIn"] = False;
               echo '<a href="seller-register.php">';
               echo '<li>Register as a Seller</li>';
               echo '</a>';
+            } else {
+              $_SESSION["seller-loggedIn"] = True;
             }
           ?>
         </ul>
