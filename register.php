@@ -15,7 +15,7 @@ session_start();
       <meta charset="utf-8"/>
       <title>Sign Up!</title>
       <link rel="stylesheet" href="registration.css" />
-      <link rel="stylesheet" href="nav-styles.css" />
+      <link rel="stylesheet" href="nav-styles.css" /  >
   </head>
   <body>
     <nav>

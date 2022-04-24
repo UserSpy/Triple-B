@@ -3,7 +3,7 @@ let word2 = document.querySelector(".word2");
 let word3 = document.querySelector(".word3");
 let successMsg = document.querySelector(".success");
 let counter = 0;
-let home = "http://127.0.0.1:5500/index.html";
+let home = "../../index.html";
 
 
 
