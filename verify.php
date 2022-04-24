@@ -13,7 +13,7 @@ if (!empty($username) || !empty($password)){
     $host = "localhost";
     $dbUsername = "root";
     $dbPassword = "";
-    $dbname = "db1";
+    $dbname = "accounts";
 
     $conn = new mysqli($host, $dbUsername, $dbPassword, $dbname);
 
