@@ -27,6 +27,7 @@
       $result = mysqli_query($conn, "SELECT * FROM Sellers WHERE SellerName='".$_POST['sellername']."'");;
       if (!mysqli_num_rows($result)) {
         $name = $_POST['sellername'];
+        $_SESSION["sellername"] = $name;
       } else {
         $valid_data = False;
         echo '<script type="text/javascript">';

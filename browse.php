@@ -1,12 +1,15 @@
-<!DOCTYPE html>
 <?php
-  session_start();
-  error_reporting(E_ALL); ini_set('display_errors', 1);
-  if (!$_SESSION["loggedIn"]) {
-    header("Location: login.html");
-  }
-  require('dbConnect.php');
+$host = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbname = "accounts";
+
+   if(!$conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)){
+       die("Failed to connect");
+   }
 ?>
+
+<!DOCTYPE html>
 
 <html lang="en" dir="ltr">
   <head>
@@ -70,9 +73,9 @@
       </nav>
 
       <!--Search Bar-->
-     <form role ="search" id = "form">
-      <input type ="search" id="query" name="q" placeholder="Search..." aria-label = "Search through site content">
-      <button>Search</button>
+     <form action = "search.php" method = "POST">
+      <input type ="text" name="search" placeholder="Search...">
+      <button type = "submit" name = "submit-search">Search</button>
     </form>
     
 
@@ -136,12 +139,33 @@
      </p>
      </div>
     </div>
-
     <!--Can add more categories here-->
 
     </div>
+
     <footer>
 
     </footer>
   </body>
+  <body>
+  <h1>Listings</h1>
+  <?php 
+    
+    $sql = "SELECT * FROM listings";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0){
+        while ($row = mysqli_fetch_assoc($result)){
+            echo "<div class = 'article-box'>
+            <h3>".$row['TextbookTitle']."</h3>
+            <p>".$row['ISBN']."</p>
+            <p>".$row['Price']."</p>
+            <p>".$row['BookCondition']."</p>
+            <p>".$row['Description']."</p>
+            </div>";
+        }
+    }
+?>
+</body>
 </html>
