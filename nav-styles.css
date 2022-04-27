@@ -23,7 +23,7 @@ nav {
 nav .action {
   color: #ff7900;
   font-weight: 700;
-  border-style: inset;
+  border-style: solid;
   border-radius: 10px;
   padding: 8px 16px;
   transition: 0.25s ease-in-out;
@@ -32,7 +32,6 @@ nav .action {
 nav .action:hover {
   color: #00274c;
   background-color: #ff7900;
-  border-style: outset;
 }
 /* Adds animation to the Buy Borrow Books Title */
 
@@ -84,7 +83,16 @@ nav .init h1:hover {
   padding-bottom: 40px;
 }
 
-nav .underline {
+.item {
+  transition: all 300ms;
+}
+
+.item:hover {
+  transform: scale(1.1);
+  text-shadow: 2px 2px black;
+}
+
+/* nav .underline {
   position: relative;
 }
 
@@ -104,7 +112,7 @@ nav .underline::after {
 nav .underline:hover::after {
   visibility: visible;
   transform: scaleX(0.85);
-}
+} */
 
 .container {
   display: flex;
