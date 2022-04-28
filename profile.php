@@ -18,7 +18,7 @@
   <body>
     <nav>
       <div class ="container">
-        <a href="index.html" class="init">
+        <a href="index.php" class="init">
           <h1>Logo</h1>
           <ul class="nav-right">
             <li><a href="browse.html"  class="underline">Browse</a></li>

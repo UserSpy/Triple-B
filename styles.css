@@ -51,15 +51,53 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  transition: all 300ms;
+}
+
+.nested:hover {
+  box-shadow: 6px 5px 4px grey;
 }
 
 .nested h3 {
   grid-column-start: 1;
   grid-column-end: 3;
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  font-style: italic;
+  color: #eb6e00;
 }
 
-.nested p {
-  border: black 1px solid;
+.nested a {
+  transition: all 300ms;
+  border-radius: 20px;
+  height: 265px;
+}
+
+.nested a:hover {
+  transform: scale(1.05);
+  border-radius: 20px;
+  height: 265px;
+  box-shadow: 6px 5px 3px grey;
+}
+
+.nested img {
+  border: black 3px solid;
+  border-radius: 20px;
+  width: 200px;
+  height: 275px;
+}
+
+.category-title h4{
+  font-size: 18px;
+  margin: 0;
+  padding: 15px 0px;
+}
+
+.category-title h4:nth-child(1){
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 0px;
 }
 
 .mix-grid > p,
@@ -69,6 +107,36 @@ body {
   padding: 1em;
 }
 
+.rating {
+  display: flex;
+  /* height: 60%; */
+  padding-top: 60px;
+  align-items: center;
+  /* z-index: 0; */
+  gap: 10px;
+}
+
+.star {
+  background-color: gray;
+  border: black 3px solid;
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  transition: all 250ms;
+}
+
+.star::after {
+  content: '';
+}
+
+.star:hover {
+  transform: rotate(75deg);
+}
+
+.s-active {
+  background-color: #FFD700;
+}
 /* List SECTION */
 .list-section {
   margin: 10vh 9.5vw;

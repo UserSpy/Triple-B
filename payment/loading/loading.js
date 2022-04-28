@@ -3,7 +3,7 @@ let word2 = document.querySelector(".word2");
 let word3 = document.querySelector(".word3");
 let successMsg = document.querySelector(".success");
 let counter = 0;
-let home = "../../index.html";
+let home = "http://localhost/Triple-B/index.php";
 
 
 
