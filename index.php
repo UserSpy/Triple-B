@@ -7,9 +7,6 @@
     if(mysqli_connect_error()){
         die('Connect Error('. mysqli_connect_error().')'. mysqli_connect_error());
     }else {
-        // change sql statement to include where???
-
-        
         $sqlRows = "SELECT * FROM listings";
         $sqlRowData = mysqli_query($conn, $sqlRows);
         $numRows = mysqli_num_rows($sqlRowData);
@@ -62,23 +59,34 @@
 
     <nav>
       <div class ="container">
-        <a href="index.php" class="nav-left">
-            <h1 class="buy">Buy</h1>
-            <h1 class="borrow">Borrow</h1>
-            <h1 class="books">Books</h1>
-        </a>
+        <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
           <ul class="nav-right">
             <li class="item"><a href="browse.html"  ><ion-icon name="search-outline"></ion-icon></a></li>
             <li  class="item"><a href="profile.html" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
+            <!-- Sign Out / Log In Logic -->
             <?php 
-              if (!$_SESSION["loggedIn"]) {
+              $sqlLoggedIn = "SELECT * FROM users";
+              $sqlLogInQuery = mysqli_query($conn, $sqlLoggedIn);
+
+              $LoggedIn = false;
+
+              while($logResult = mysqli_fetch_array($sqlLogInQuery)){
+                if ($logResult['Active']) {
+                  $LoggedIn = true;
+                  break;
+                }
+              }
+              if($LoggedIn){
+                echo '<li><a href="login.html" class="action">Sign Out</a></li>';
+                // $latestListing['Active'] = false;
+                $updateActivity = "UPDATE users SET Active=false WHERE Active=true";
+                if(mysqli_query($conn, $updateActivity)) {
+                } else {  
+                }
+              } else {
                 echo '<li><a href="login.html" class="action">Log In</a></li>';
-              }else {
-                $_SESSION["loggedIn"] = false;
-                echo '<li><a href="index.php" class="action">Sign Out</a></li>';
               }
             ?>
-            
           </ul>
         
       </div>

@@ -12,21 +12,41 @@
   <head>
     <meta charset="utf-8">
     <title>Triple-B</title>
-    <link rel="stylesheet" href="profile-styles.css">
-    <link rel="stylesheet" href="nav-styles.css">
+    <link rel="stylesheet" href="profile-styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="nav-styles.css?v=<?php echo time(); ?>">
   </head>
   <body>
     <nav>
       <div class ="container">
-        <a href="index.php" class="init">
-          <h1>Logo</h1>
+        <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
           <ul class="nav-right">
-            <li><a href="browse.html"  class="underline">Browse</a></li>
-            <li><a href="listing.html"  class="underline">Listings</a></li>
-            <li><a href="profile.php"  class="underline">Profile</a></li>
-            <li><a href="login.html" class="action">Log In</a></li>
+            <li class="item"><a href="browse.html"  ><ion-icon name="search-outline"></ion-icon></a></li>
+            <!-- Sign Out / Log In Logic -->
+            <?php 
+              $sqlLoggedIn = "SELECT * FROM users";
+              $sqlLogInQuery = mysqli_query($conn, $sqlLoggedIn);
+
+              $LoggedIn = false;
+
+              while($logResult = mysqli_fetch_array($sqlLogInQuery)){
+                if ($logResult['Active']) {
+                  $LoggedIn = true;
+                  break;
+                }
+              }
+              if($LoggedIn){
+                echo '<li><a href="login.html" class="action">Sign Out</a></li>';
+                // $latestListing['Active'] = false;
+                $updateActivity = "UPDATE users SET Active=false WHERE Active=true";
+                if(mysqli_query($conn, $updateActivity)) {
+                } else {  
+                }
+              } else {
+                echo '<li><a href="login.html" class="action">Log In</a></li>';
+              }
+            ?>
           </ul>
-        </a>
+        
       </div>
     </nav>
     <br></br>
@@ -53,13 +73,13 @@
         <ul style="list-style-type:none">
           <!-- redirects to home page for the time being -->
           <a href="index.html">
-            <li>Option 1</li>
+            <li>History</li>
           </a>
           <a href="index.html">
-            <li>Option 2</li>
+            <li>Return</li>
           </a>
           <a href="index.html">
-            <li>Option 3</li>
+            <li>Shipping</li>
           </a>
         </ul>
       </div>
@@ -76,13 +96,13 @@
         <ul style="list-style-type:none">
           <!-- redirects to home page for the time being -->
           <a href="index.html">
-            <li>Option 1</li>
+            <li>Add Payment</li>
           </a>
           <a href="index.html">
-            <li>Option 2</li>
+            <li>Delete Payment</li>
           </a>
           <a href="index.html">
-            <li>Option 3</li>
+            <li>Edit Payment</li>
           </a>
         </ul>
       </div>
@@ -99,42 +119,16 @@
         <ul style="list-style-type:none">
           <!-- redirects to home page for the time being -->
           <a href="index.html">
-            <li>Option 1</li>
+            <li>History</li>
           </a>
           <a href="index.html">
-            <li>Option 2</li>
-          </a>
-          <a href="index.html">
-            <li>Option 3</li>
+            <li>Recent</li>
           </a>
         </ul>
       </div>
     </div>
 
     <div class="three-cards" style="width:1000px; margin:0 auto;">
-      <div class="card">
-        <!-- redirects to home page for the time being -->
-        <a href="index.html">
-          <!-- Licensed under Creative Commons CC-BY Pixabay -->
-          <img src="images/information-icon.png" alt="Information Icon" class="icon-image" align="left">
-        </a>
-        <div class="card-headings">
-          <h2>Customer Service</h2>
-        </div>
-        <!-- Unordered List displaying all the choices user's have. -->
-        <ul style="list-style-type:none">
-          <!-- redirects to home page for the time being -->
-          <a href="index.html">
-            <li>Option 1</li>
-          </a>
-          <a href="index.html">
-            <li>Option 2</li>
-          </a>
-          <a href="index.html">
-            <li>Option 3</li>
-          </a>
-        </ul>
-      </div>
       <div class="card">
         <!-- redirects to home page for the time being -->
         <a href="index.html">
@@ -148,13 +142,10 @@
         <ul style="list-style-type:none">
           <!-- redirects to home page for the time being -->
           <a href="index.html">
-            <li>Option 1</li>
+            <li>Muted People</li>
           </a>
           <a href="index.html">
-            <li>Option 2</li>
-          </a>
-          <a href="index.html">
-            <li>Option 3</li>
+            <li>Configuration</li>
           </a>
         </ul>
       </div>
@@ -189,45 +180,42 @@
           ?>
         </ul>
       </div>
-    </div>
-    <?php
+      <!-- Create listing card -->
+      <?php
       if ($_SESSION["seller-loggedIn"]) {
-    ?>
-      <div class="three-cards" style="width:1000px; margin:0 auto;">
-        <div class="card" style="opacity: 0">
+      ?>
+      <div class="card">
+        <!-- redirects to home page for the time being -->
+        <a href="index.html">
+          <!-- Licensed under Creative Commons CC-BY Pixabay -->
+          <img src="images/create-listing-icon.png" alt="Cardboard Box Icon" class="icon-image" align="left">
+        </a>
+        <div class="card-headings">
+          <h2>Notification Settings</h2>
         </div>
-
-        <div class="card">
-          <!-- redirects to home page for the time being -->
-          <a href="index.html">
-            <!-- Licensed under Creative Commons CC-BY Pixabay -->
-            <img src="images/create-listing-icon.png" alt="Cardboard Box Icon" class="icon-image" align="left">
-          </a>
-          <div class="card-headings">
-            <h2>My Listings</h2>
-          </div>
-          <!-- Unordered List displaying all the choices user's have. -->
-          <ul style="list-style-type:none">
+        <!-- Unordered List displaying all the choices user's have. -->
+        <ul style="list-style-type:none">
             <a href="create-listing.php">
               <li>Create Listing</li>
             </a>
             <a href="index.html">
               <li>View Listing</li>
             </a>
-            <a href="index.html">
-              <li>Option 3</li>
-            </a>
           </ul>
-        </div>
+      </div>
+      
+      <?php
+        }
+      ?>
+    </div>
+
 
         <div class="card" style="opacity: 0">
         </div>
 
       </div>
-    <?php
-      }
-    ?>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 
 </html>

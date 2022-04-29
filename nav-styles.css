@@ -42,7 +42,7 @@ nav .action:hover {
 nav .item {
   font-size: 32px;
   font-weight: 500;
-  transition: all 500ms;
+  transition: all 800ms;
 }
 
 nav .item:hover {
@@ -69,35 +69,12 @@ nav .nav-left {
   gap: 15px;
 }
 
-nav .nav-left .buy, nav .nav-left .borrow, nav .nav-left .books {
+nav .nav-left h1 {
   transition: all 300ms;
 }
 
 nav .nav-left h1:hover {
   transform: scale(1.1);
-}
-
-.buy::after, .buy::before, 
-.borrow::after,  .borrow::before,
-.books::after,  .books::before {
-  visibility: hidden;
-  transition: all 300ms;
-}
-
-
-nav .nav-left .buy:hover::after,  .buy:hover::before{
-  content: '💵';
-  visibility: visible;
-}
-
-nav .nav-left .borrow:hover::after,  .borrow:hover::before{
-  content: '🤝';
-  visibility: visible;
-}
-
-nav .nav-left .books:hover::after,  .books:hover::before{
-  content: '📙';
-  visibility: visible;
 }
 
 nav .nav-right {

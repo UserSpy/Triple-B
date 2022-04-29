@@ -5,17 +5,12 @@ let successMsg = document.querySelector(".success");
 let counter = 0;
 let home = "http://localhost/Triple-B/index.php";
 
-
+let limitTime = Math.floor(Math.random() * 9);
+console.log(limitTime);
 
 setInterval(() => {
     console.log(counter)
-    if(word1.classList.contains("active")){
-        word1.classList.toggle("active");
-        word2.classList.toggle("active");
-    }else if(word2.classList.contains("active")){
-        word2.classList.toggle("active");
-        word3.classList.toggle("active");
-    }else if(counter === 1){
+    if(counter === limitTime){
         word1.classList.remove("active");
         word2.classList.remove("active");
         word3.classList.remove("active");
@@ -27,9 +22,21 @@ setInterval(() => {
         setTimeout(()=>{
             window.location.replace(home);
         }, 1000);
+    }
+    if(word1.classList.contains("active")){
+        word1.classList.toggle("active");
+        word2.classList.toggle("active");
+        counter++;
+        console.log(counter);
+    }else if(word2.classList.contains("active")){
+        word2.classList.toggle("active");
+        word3.classList.toggle("active");
+        counter++;
+        console.log(counter);
     }else{
         word3.classList.toggle("active");
         word1.classList.toggle("active");
         counter++;
+        console.log(counter);
     }
-}, 550);
+}, 550); //550

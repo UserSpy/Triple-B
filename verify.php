@@ -29,13 +29,22 @@ if (!empty($username) || !empty($password)){
         $stmt->store_result();
         $rnum= $stmt ->num_rows;
 
+        $sqlInfo = "SELECT * FROM Users WHERE Username = '$username'";
+        $loggedUser = mysqli_query($conn, $sqlInfo);
+        $latestListing = mysqli_fetch_assoc($loggedUser);
 
         if($rnum==1){
             $_SESSION['user_id'] = $SELECT_ID;
             $_SESSION['loggedIn'] = true;
             $_SESSION['username'] = $username;
-            echo "Login successful";
-            header("Location: profile.php");
+            
+            $updateActivity = "UPDATE users SET Active=true WHERE Username='$username'";
+            if(mysqli_query($conn, $updateActivity)) {
+                echo "Login successful: ".$username;
+                header("Location: profile.php");
+            } else {
+                echo "Login NOT successful: ".$username;
+            }
         }else{
             echo "No records in database";
         }
