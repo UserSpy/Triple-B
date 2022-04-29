@@ -1,17 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Open+Sans&family=Roboto:ital,wght@0,400;1,300&display=swap");
 * {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     background-image: url(../../images/homepage\ bg.jpg);
     background-size: cover;
 }
-
-.hidden {
-    display: none;
-}
-
 
 .background {
     display: flex;
@@ -44,6 +39,21 @@ body {
 
 .active {
     transform: scale(1.1);
-    color: red;
+    color: goldenrod;
     
+}
+
+.success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.hidden {
+    display: none;
 }

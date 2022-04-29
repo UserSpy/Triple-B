@@ -2,7 +2,7 @@
   session_start();
   error_reporting(E_ALL); ini_set('display_errors', 1);
   if (!$_SESSION["loggedIn"]) {
-    header("Location: login.html");
+    header("Location: login.php");
   }
   require('dbConnect.php');
 ?>

@@ -100,7 +100,7 @@
       $Description = $_REQUEST['description'];
     }
 
-    $target_dir = "uploads/";
+    // $target_dir = "uploads/";
 
     // array to store the file path of each of the uploaded files
     $file_array = ["", "", "", "", "", ""];
@@ -116,7 +116,7 @@
     }
     // Iterate through all the files
     for($i = 0; $i < $file_count; $i++) {
-       $target_file = $target_dir . rand() . basename($_FILES["fileToUpload"]["name"][$i]);
+       $target_file = basename($_FILES["fileToUpload"]["name"][$i]);
        $file_array[$i] = $target_file;
        $extension = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
