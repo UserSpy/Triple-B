@@ -35,14 +35,14 @@
                 }
               }
               if($LoggedIn){
-                echo '<li><a href="login.html" class="action">Sign Out</a></li>';
+                echo '<li><a href="login.html" class="action">Sign In/Out</a></li>';
                 // $latestListing['Active'] = false;
                 $updateActivity = "UPDATE users SET Active=false WHERE Active=true";
                 if(mysqli_query($conn, $updateActivity)) {
                 } else {  
                 }
               } else {
-                echo '<li><a href="login.html" class="action">Log In</a></li>';
+                echo '<li><a href="login.html" class="action">Sign In/Out</a></li>';
               }
             ?>
           </ul>

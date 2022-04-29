@@ -100,8 +100,6 @@
       $Description = $_REQUEST['description'];
     }
 
-    // $target_dir = "uploads/";
-
     // array to store the file path of each of the uploaded files
     $file_array = ["", "", "", "", "", ""];
 

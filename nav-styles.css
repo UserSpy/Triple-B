@@ -44,6 +44,7 @@ nav .item {
   font-weight: 500;
   transition: all 800ms;
 }
+/* Adds animation to the Buy Borrow Books Title */
 
 nav .item:hover {
   transform: rotate(360deg)  scale(1.3);

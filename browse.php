@@ -1,20 +1,23 @@
-<!DOCTYPE html>
 <?php
-  session_start();
-  error_reporting(E_ALL); ini_set('display_errors', 1);
-  if (!$_SESSION["loggedIn"]) {
-    header("Location: login.html");
-  }
-  require('dbConnect.php');
+$host = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "";
+    $dbname = "accounts";
+
+   if(!$conn = new mysqli($host, $dbUsername, $dbPassword, $dbname)){
+       die("Failed to connect");
+   }
 ?>
+
+<!DOCTYPE html>
 
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
     <!-- <link rel="stylesheet" href="styles.css"> -->
-    <link rel="stylesheet" href="nav-styles.css">
+    <link rel="stylesheet" href="nav-styles.css?v=<?php echo time(); ?>">
     <style>
       * {box-sizing:border-box;}
     .column{
@@ -56,23 +59,44 @@
     <h1>Categories</h1>
     <!-- We'll first be needing to add items to the nav bar (So what we plan on doing this first sprint meeting) -->
     <nav>
-        <div class ="container">
-          <a href="index.php" class="init">
-            <h1>Logo</h1>
-            <ul class="nav-right">
-              <li><a href="browse.html"  class="underline">Browse</a></li>
-              <li><a href="listing.html"  class="underline">Listings</a></li>
-              <li><a href="profile.php"  class="underline">Profile</a></li>
-              <li><a href="login.html" class="action">Log In</a></li>
-            </ul>
-          </a>
-        </div>
-      </nav>
+      <div class ="container">
+        <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
+          <ul class="nav-right">
+            <li class="item"><a href="browse.php"  ><ion-icon name="search-outline"></ion-icon></a></li>
+            <li  class="item"><a href="profile.html" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
+            <!-- Sign Out / Log In Logic -->
+            <?php 
+              $sqlLoggedIn = "SELECT * FROM users";
+              $sqlLogInQuery = mysqli_query($conn, $sqlLoggedIn);
+
+              $LoggedIn = false;
+
+              while($logResult = mysqli_fetch_array($sqlLogInQuery)){
+                if ($logResult['Active']) {
+                  $LoggedIn = true;
+                  break;
+                }
+              }
+              if($LoggedIn){
+                echo '<li><a href="login.html" class="action">Sign Out</a></li>';
+                // $latestListing['Active'] = false;
+                $updateActivity = "UPDATE users SET Active=false WHERE Active=true";
+                if(mysqli_query($conn, $updateActivity)) {
+                } else {  
+                }
+              } else {
+                echo '<li><a href="login.html" class="action">Log In</a></li>';
+              }
+            ?>
+          </ul>
+        
+      </div>
+    </nav>
 
       <!--Search Bar-->
-     <form role ="search" id = "form">
-      <input type ="search" id="query" name="q" placeholder="Search..." aria-label = "Search through site content">
-      <button>Search</button>
+     <form action = "search.php" method = "POST">
+      <input type ="text" name="search" placeholder="Search...">
+      <button type = "submit" name = "submit-search">Search</button>
     </form>
     
 
@@ -136,12 +160,33 @@
      </p>
      </div>
     </div>
-
     <!--Can add more categories here-->
 
     </div>
+
     <footer>
 
     </footer>
   </body>
+  <body>
+  <h1>Listings</h1>
+  <?php 
+    
+    $sql = "SELECT * FROM listings";
+    $result = mysqli_query($conn, $sql);
+    $queryResults = mysqli_num_rows($result);
+
+    if ($queryResults > 0){
+        while ($row = mysqli_fetch_assoc($result)){
+            echo "<div class = 'article-box'>
+            <h3>".$row['TextbookTitle']."</h3>
+            <p>".$row['ISBN']."</p>
+            <p>".$row['Price']."</p>
+            <p>".$row['BookCondition']."</p>
+            <p>".$row['Description']."</p>
+            </div>";
+        }
+    }
+?>
+</body>
 </html>

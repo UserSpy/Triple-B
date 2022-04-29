@@ -40,11 +40,14 @@ if (!empty($username) || !empty($password)){
             
             $updateActivity = "UPDATE users SET Active=true WHERE Username='$username'";
             if(mysqli_query($conn, $updateActivity)) {
+                // sleep(3);
                 echo "Login successful: ".$username;
-                header("Location: profile.php");
+                
+                header("Location: ./profile.php");
             } else {
                 echo "Login NOT successful: ".$username;
             }
+            
         }else{
             echo "No records in database";
         }

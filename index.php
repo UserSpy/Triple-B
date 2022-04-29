@@ -57,12 +57,12 @@
 
   <body>
 
-    <nav>
+  <nav>
       <div class ="container">
         <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
           <ul class="nav-right">
-            <li class="item"><a href="browse.html"  ><ion-icon name="search-outline"></ion-icon></a></li>
-            <li  class="item"><a href="profile.html" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
+            <li class="item"><a href="browse.php"  ><ion-icon name="search-outline"></ion-icon></a></li>
+            <li  class="item"><a href="profile.php" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
             <!-- Sign Out / Log In Logic -->
             <?php 
               $sqlLoggedIn = "SELECT * FROM users";
@@ -77,14 +77,14 @@
                 }
               }
               if($LoggedIn){
-                echo '<li><a href="login.html" class="action">Sign Out</a></li>';
+                echo '<li><a href="login.html" class="action">Sign In/Out</a></li>';
                 // $latestListing['Active'] = false;
                 $updateActivity = "UPDATE users SET Active=false WHERE Active=true";
                 if(mysqli_query($conn, $updateActivity)) {
                 } else {  
                 }
               } else {
-                echo '<li><a href="login.html" class="action">Log In</a></li>';
+                echo '<li><a href="login.html" class="action">Sign In/Out</a></li>';
               }
             ?>
           </ul>
