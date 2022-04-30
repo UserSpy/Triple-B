@@ -161,17 +161,41 @@
     <link rel="stylesheet" href="nav-styles.css">
   </head>
   <body>
-    <nav>
+  <nav>
       <div class ="container">
-        <a href="index.html" class="init">
-          <h1>Logo</h1>
-          <ul class="nav-right">
-            <li><a href="browse.html"  class="underline">Browse</a></li>
-            <li><a href="listing.html"  class="underline">Listings</a></li>
-            <li><a href="profile.php"  class="underline">Profile</a></li>
-            <li><a href="login.html" class="action">Log In</a></li>
-          </ul>
+        <a href="index.php" class="nav-left">
+          <h1>Buy Borrow Books</h1>
         </a>
+          <ul class="nav-right">
+          <li class="item"><a href="index.php"  ><ion-icon name="home-outline" class="mobileHome"></ion-icon></ion-icon></a></li>
+            <li class="item"><a href="browse.php"  ><ion-icon name="search-outline"></ion-icon></a></li>
+            <li  class="item"><a href="profile.php" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
+            <!-- Sign Out / Log In Logic -->
+            <?php 
+              $sqlLoggedIn = "SELECT * FROM users";
+              $sqlLogInQuery = mysqli_query($conn, $sqlLoggedIn);
+
+              $LoggedIn = false;
+
+              while($logResult = mysqli_fetch_array($sqlLogInQuery)){
+                if ($logResult['Active']) {
+                  $LoggedIn = true;
+                  break;
+                }
+              }
+              if($LoggedIn){
+                echo '<li><a href="login.html" class="action">Sign In/Out</a></li>';
+                // $latestListing['Active'] = false;
+                $updateActivity = "UPDATE users SET Active=false WHERE Active=true";
+                if(mysqli_query($conn, $updateActivity)) {
+                } else {  
+                }
+              } else {
+                echo '<li><a href="login.html" class="action">Sign In/Out</a></li>';
+              }
+            ?>
+          </ul>
+        
       </div>
     </nav>
   <br></br>
@@ -241,5 +265,7 @@
         <input type="submit" name="submit" value="Submit">
     </form>
   </div>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
