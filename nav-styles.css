@@ -123,3 +123,14 @@ nav .underline:hover::after {
   font-size: 20px;
   font-weight: 700;
 }
+
+
+@media screen and (max-width: 768px){
+  .nav-right li{
+      font-size: 15px
+    }
+
+  .container h1{
+    display:none;
+  }
+}

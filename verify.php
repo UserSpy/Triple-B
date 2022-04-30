@@ -32,6 +32,7 @@ if (!empty($username) || !empty($password)){
         if($rnum==1){
             $_SESSION['user_id'] = $SELECT_ID;
            echo "Login successful";
+           header("Location: profile.php");
         }else{
             echo "No records in database";
         }

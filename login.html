@@ -1,26 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+<div id="content-desktop">
+    <head>
+      <meta charset="utf-8">
+      <title>Tripple B Login</title>
+      <link rel="stylesheet" href="login.css">
+
+    </head>
+    <body>
+      <h1>Tripple B, CS students save the bookstore</h1>
+
+      <nav>
+        <div class ="container">
+          <ul class="nav-right">
+
+          </ul>
+        </div>
+      </nav>
+
+      <div class="Login">
+      </div>
+
+
+      <div class="RightColumn">
+
+      <!-- begin UPPER RIGHT box -->
+                  <div class="VisuallyHidden" id="upperRight" role="navigation" aria-labelledby="upperRight">
+
+                  </div>
+                  <div class="LoginBox" id="content" role="main">
+
+  <!-- begin login form -->
+                 <form name="loginForm" action=verify.php method="POST" id="Form1" role="form">
+
+                       <div class="form-element-wrapper">
+  Login
+                       </div>
+
+                    <div class="form-element-wrapper">
+                       <label for="username">Username</label>
+                       <input class="LoginTextBox" id="username" name="j_username" type="text" size="20" value="" autofocus="">
+                    </div>
+
+                    <div id="UsernameAlert" class="Alert" style="display: none;">
+                       Your username is the name before the '@' in your CSUF email address.
+                       <br>
+                       <a href="https://my.fullerton.edu/Accounts" class="LoginBoxAlert">Forgot your username?</a>
+                    </div>
+                    <div id="NewUserAlert" class="Alert" style="display: none;">
+                       Please click the link below to create your campus account.
+                       <br>
+                       <a href="https://my.fullerton.edu/Accounts/StudentRegistration" class="LoginBoxAlert">Create my campus account</a>
+                    </div>
+                    <div class="form-element-wrapper">
+                       <label for="password">Password</label>
+                       <input class="LoginTextBox" id="password" name="j_password" type="password" size="20" value="">
+                    </div>
+
+                    <div class="form-element-wrapper">
+                       <button class="LoginButton" type="submit" name="_eventId_proceed">Login</button>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="Help">Need help logging in?</a>
+
+                    <a> Not a member yet? </a>
+                    <a href="register.php">Sign Up</a>
+                 </form>
+              </div>
+
+  </script>
+  </div>
+
+      <footer>
+      </footer>
+    </body>
+</div>
+<div id="content-mobile">
   <head>
     <meta charset="utf-8">
     <title>Tripple B Login</title>
     <link rel="stylesheet" href="login.css">
-    <!-- <link rel="stylesheet" href="nav-styles.css"> -->
+
   </head>
   <body>
     <h1>Tripple B, CS students save the bookstore</h1>
-    <!-- We'll first be needing to add items to the nav bar (So what we plan on doing this first sprint meeting) -->
+
     <nav>
       <div class ="container">
         <ul class="nav-right">
-          <!-- Add your button names here, additionally change how it looks in css -->
+
         </ul>
       </div>
     </nav>
 
-    <div class="Login"> <!-- Just tempory, to fill up the website -->
-      <h2>Login</h2>
-      <p>
-      </p>
+    <div class="Login">
     </div>
 
 
@@ -28,7 +100,7 @@
 
     <!-- begin UPPER RIGHT box -->
                 <div class="VisuallyHidden" id="upperRight" role="navigation" aria-labelledby="upperRight">
-                   <h2>Login Box</h2>
+
                 </div>
                 <div class="LoginBox" id="content" role="main">
 
@@ -62,59 +134,12 @@ Login
                   <div class="form-element-wrapper">
                      <button class="LoginButton" type="submit" name="_eventId_proceed">Login</button>
                   </div>
+                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="Help">Need help logging in?</a>
 
+                  <!-- Prompt User to Sign Up If They Do Not Have an Account Yet -->
+                  <a> Not a member yet? </a>
+                  <a href="register.php">Sign Up</a>
                </form>
-<!-- end login form -->
-
-               <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="Help">Need help logging in?</a>
-
-               <!-- Prompt User to Sign Up If They Do Not Have an Account Yet -->
-               <h2> Not a member yet? </h2>
-               <a href="register.php">Sign Up</a>
             </div>
-
-
-
-
-
-<!--
-    <div class="container">
-   <label for="uname"><b>Username</b></label>
-   <input type="text" placeholder="Enter Username" name="uname" required>
-
-   <label for="psw"><b>Password</b></label>
-   <input type="password" placeholder="Enter Password" name="psw" required>
-
-   <button type="submit">Login</button>
-   <label>
-     <input type="checkbox" checked="checked" name="remember"> Remember me
-   </label>
-  </div>
--->
-
-  <div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
-
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
-
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-
-  <script>
-  function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
 </div>
-
-    <footer>
-    </footer>
-  </body>
 </html>
