@@ -7,7 +7,9 @@
 }
 
 body {
-  background-image: none;
+  background-image: url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .profile-title {
@@ -22,9 +24,10 @@ body {
     font-size: 24px;
     color: Orange;
 }
-
 h3 {
-  color: Red;
+  color: white;
+  font-weight: 800;
+  text-shadow: 2px 2px #ff7900;
   padding-left: 100px;
   font-size: 40px;
   text-align: center;
@@ -53,7 +56,7 @@ h3 {
   display: flex;
   flex-direction: row;
   padding: 20px 60px 20px 100px;
-  background-color: lightblue;
+  background-color:rgb(245, 245, 245, 0.85);
 }
 
 /* Used to resize the icons inside of the cards. */

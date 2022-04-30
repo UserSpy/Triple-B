@@ -1,10 +1,9 @@
 /* This is a font style I ripped off, Only temporary we can change this later */
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Open+Sans&family=Roboto:ital,wght@0,400;1,300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;1,700&family=Fredoka:wght@300;400&family=Open+Sans&family=Poppins:wght@200;300;400&family=Roboto:ital,wght@0,400;1,300&display=swap');
 /* How CSS works is that "*" ".class-name" and tags like "h1" are affected with the corresponding {} attributes */
-* {
+html * {
   /* The star refers to all items in the html file */
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
   list-style: none;
   text-decoration: none;
   color: #ff7900;
@@ -15,6 +14,7 @@ body {
   background-image: url("https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1198&q=80");
   background-size: cover;
   background-attachment: fixed;
+  
 }
 
 /* HERO SECtION */
@@ -36,16 +36,6 @@ body {
   background-color:rgb(245, 245, 245, 0.85);
   border-radius: 20px;
   width: 8em;
-  /* padding-top: 2em;
-  color: white;
-
-  text-shadow: 2px 2px #084b8a;
-  font-size: 72px; */
-}
-/* First View */
-
-.category-section {
-  margin: 10px;
 }
 
 .mix-grid {
@@ -53,22 +43,66 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1em;
   grid-auto-rows: minmax(200px, auto);
-  margin: 5vh 15vw;
+  /* margin: 5vh 15vw; */
+  margin: 10vh 9.5vw;
 }
 
 .nested {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  transition: all 300ms;
+}
+
+.nested:hover {
+  box-shadow: 0px 0px 19px #ffa353;
 }
 
 .nested h3 {
   grid-column-start: 1;
   grid-column-end: 3;
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  font-style: italic;
+  color: #eb6e00;
 }
 
-.nested p {
-  border: black 1px solid;
+.nested a {
+  transition: all 300ms;
+  border-radius: 20px;
+  height: 265px;
+}
+
+.nested a:hover {
+  transform: scale(1.05);
+  border-radius: 20px;
+  height: 265px;
+  box-shadow: 6px 5px 3px grey;
+}
+
+.nested img {
+  border: black 3px solid;
+  border-radius: 20px;
+  width: 200px;
+  height: 275px;
+}
+
+.category-title h4{
+  font-size: 18px;
+  margin: 0;
+  padding: 15px 0px;
+}
+
+.category-title h4:nth-child(1){
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 0px;
+}
+
+.more-info {
+  font-weight: 100;
+  font-style: italic;
 }
 
 .mix-grid > p,
@@ -78,19 +112,66 @@ body {
   padding: 1em;
 }
 
-/* HOT SECTION */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.star {
+  background-color: rgba(128, 128, 128, 0.45);
+  border: black 3px solid;
+  border-radius: 5px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  transition: all 250ms;
+}
+
+.star::after {
+  content: '';
+}
+
+.star:hover {
+  transform: rotate(75deg);
+}
+
+.s-active {
+  background-color: #FFD700;
+}
+/* List SECTION */
 .list-section {
-  margin: 5vh 10vw;
+  margin: 10vh 9.5vw;
   padding: 25px;
   background-color:rgb(245, 245, 245, 0.85);
   border-radius: 20px;
+  transition: all 300ms;
+}
+
+.list-section:hover {
+  box-shadow: 0px 0px 19px #ffa353;
+}
+
+.list-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .list-section h2 {
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 32px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 15px 30px;
+}
+
+.mobileTitle {
+  position: absolute;
+  visibility: hidden;
 }
 
 .scroller-grid {
@@ -100,9 +181,58 @@ body {
   grid-auto-rows: minmax(50px, auto);
 }
 
-.scroller-grid > p {
+.scroller-grid .book-cont {
   background-color: #f5f5f5;
   padding: 1em;
+  height: 280px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.book-cont {
+  position: relative;
+  border-radius: 20px;
+}
+
+
+.book-cont img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: #00274c 2px solid;
+  border-radius: 20px;
+  /* transition: all 350ms; */
+}
+
+.listing-info {
+  position: absolute;
+  overflow: hidden;
+  height: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 350ms ease;
+}
+
+.book-cont:hover .listing-info {
+  bottom: 0;
+  height: 90%;
+  background-color: rgb(245, 245, 245, 0.85);
+  border-radius: 20px;
+}
+
+.listing-info {
+  padding: 15px;
+}
+
+.listing-info p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.listing-info .smol-text {
+  font-size: 12px;
+  font-weight: 400;
 }
 
 /* MESSAGE DIRECTOR */
@@ -241,8 +371,55 @@ input[type=search] {
   padding: 1em;
 }
 
+.category-section{
+  margin: 5vw;
+}
+
+.mix-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-auto-rows: minmax(200px, auto);
+  margin: 5vh 0 10vh 0;
+}
+
+.nested h3 {
+  padding: 10px;
+  font-size: 18px;
+}
+
+.nested a {
+  width: 100px;
+  height: 225px;
+}
+
+.nested a:hover {
+  width: 100px;
+  height: 225px;
+  box-shadow: 6px 5px 3px rgb(56, 56, 56);
+}
+
+.nested img {
+  border: black 3px solid;
+  border-radius: 20px;
+  width: 145px;
+  height: 225px;
+}
+
+.category-title h4{
+  font-size: 14px;
+  margin: 0;
+  padding: 15px 0px;
+}
+
+.category-title h4:nth-child(1){
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 0px;
+}
+
 .list-section {
-  margin: 5vh 10vw;
+  margin: 0;
   padding: 25px;
   background-color:rgb(0, 0, 0, 0.55);
   border-radius: 20px;
@@ -253,15 +430,34 @@ input[type=search] {
   grid-column-gap: 1em;
   grid-auto-rows: minmax(50px, auto);
 }
+
+.list-section {
+  margin: 15px 0px;
+}
+
 .list-section h2 {
   padding: 1em;
-  justify-content: center;
-  align-items: center;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 18px;
+}
+
+.mobileTitle {
+  visibility: visible;
+}
+
+.desktopTitle {
+  visibility: hidden;
+}
+
+.scroller-grid a:nth-child(even) {
+  visibility: hidden;
+}
+
+.scroller-grid a:nth-child(odd) {
+  margin: 15px 0px;
 }
 
 
 }
 
-}
+

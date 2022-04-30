@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<?php
+  session_start();
+  error_reporting(E_ALL); ini_set('display_errors', 1);
+  if (!$_SESSION["loggedIn"]) {
+    header("Location: login.html");
+  }
+  require('dbConnect.php');
+?>
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -49,12 +58,12 @@
     <!-- We'll first be needing to add items to the nav bar (So what we plan on doing this first sprint meeting) -->
     <nav>
         <div class ="container">
-          <a href="index.html" class="init">
+          <a href="index.php" class="init">
             <h1>Logo</h1>
             <ul class="nav-right">
               <li><a href="browse.html"  class="underline">Browse</a></li>
               <li><a href="listing.html"  class="underline">Listings</a></li>
-              <li><a href="profile.html"  class="underline">Profile</a></li>
+              <li><a href="profile.php"  class="underline">Profile</a></li>
               <li><a href="login.html" class="action">Log In</a></li>
             </ul>
           </a>
@@ -62,10 +71,11 @@
       </nav>
 
       <!--Search Bar-->
-     <form id = "form">
+     <form role ="search" id = "form">
       <input type ="search" id="query" name="q" placeholder="Search..." aria-label = "Search through site content">
       <button>Search</button>
     </form>
+    
 
     <div class="row"> <!-- Just tempory, to fill up the website -->
       <div class = "column">

@@ -15,20 +15,17 @@ session_start();
       <meta charset="utf-8"/>
       <title>Sign Up!</title>
       <link rel="stylesheet" href="registration.css" />
-      <link rel="stylesheet" href="nav-styles.css" />
+      <link rel="stylesheet" href="nav-styles.css" /  >
   </head>
   <body>
     <nav>
-      <div class ="container">
-        <a href="index.html" class="init">
-          <h1>Logo</h1>
+    <div class ="container">
+        <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
           <ul class="nav-right">
-            <li><a href="browse.html" class="underline">Browse</a></li>
-            <li><a href="listing.html" class="underline">Listings</a></li>
-            <li><a href="profile.php" class="underline">Profile</a></li>
-            <li><a href="login.html" class="action">Log In</a></li>
+            <li class="item"><a href="browse.php"  ><ion-icon name="search-outline"></ion-icon></a></li>
+            <li><a href="login.html" class="action">Sign In/Out</a></li>
           </ul>
-        </a>
+        
       </div>
     </nav>
 
@@ -154,5 +151,7 @@ session_start();
 <?php
 }
 ?>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
