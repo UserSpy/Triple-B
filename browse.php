@@ -62,8 +62,7 @@ $host = "localhost";
       <div class ="container">
         <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
           <ul class="nav-right">
-            <li class="item"><a href="browse.php"  ><ion-icon name="search-outline"></ion-icon></a></li>
-            <li  class="item"><a href="profile.html" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
+            <li  class="item"><a href="profile.php" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
             <!-- Sign Out / Log In Logic -->
             <?php 
               $sqlLoggedIn = "SELECT * FROM users";
@@ -188,5 +187,7 @@ $host = "localhost";
         }
     }
 ?>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

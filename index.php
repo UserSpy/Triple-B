@@ -59,8 +59,11 @@
 
   <nav>
       <div class ="container">
-        <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
+        <a href="index.php" class="nav-left">
+          <h1>Buy Borrow Books</h1>
+        </a>
           <ul class="nav-right">
+          <li class="item"><a href="index.php"  ><ion-icon name="home-outline" class="mobileHome"></ion-icon></ion-icon></a></li>
             <li class="item"><a href="browse.php"  ><ion-icon name="search-outline"></ion-icon></a></li>
             <li  class="item"><a href="profile.php" ><ion-icon name="person-outline"></ion-icon></ion-icon></a></li>
             <!-- Sign Out / Log In Logic -->
@@ -222,11 +225,12 @@
 
     <div class="list-section">
       <div class="list-title">
-        <h2>🖥️ Popular Computer Science Books 💻</h2>
+        <h2 class="desktopTitle">🖥️ Popular Computer Science Books 💻</h2>
+        <h2 class="mobileTitle">🖥️ Computer Science 💻</h2>
       </div>
       <div class="scroller-grid">
         <!-- cs book 1 -->
-        <a href="listing.php?tupleID=5">
+        <a href="listing.php?tupleID=11">
           <div class="book-cont">
 
             <img src="./uploads/204169227771iTDxDY7CL.jpg" alt="image">
@@ -237,7 +241,7 @@
           </div>
         </a>
         <!-- cs book 2 -->
-        <a href="listing.php?tupleID=7" class="book-cont">
+        <a href="listing.php?tupleID=13" class="book-cont">
           <img src="./uploads/90625752581Uec7eLvaL.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $200<br>Condition: Very Poor</p>
@@ -245,7 +249,7 @@
           </div>
         </a>
         <!-- cs book 3 -->
-        <a href="listing.php?tupleID=8" class="book-cont">
+        <a href="listing.php?tupleID=14" class="book-cont">
           <img src="./uploads/411ejyE8obL._SX377_BO1,204,203,200_.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $0<br>Condition: Fair</p>
@@ -253,7 +257,7 @@
           </div>
         </a>
         <!-- cs book 4 -->
-        <a href="listing.php?tupleID=6" class="book-cont">
+        <a href="listing.php?tupleID=12" class="book-cont">
           <img src="./uploads/12125434891JLJ+dZOUL.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $400<br>Condition: Good</p>
@@ -265,11 +269,12 @@
 
     <div class="list-section">
       <div class="list-title">
-        <h2>🧪 Popular Chemistry Books ⚗️</h2>
+        <h2 class="desktopTitle">🧪 Popular Chemistry Books ⚗️</h2>
+        <h2 class="mobileTitle">🧪 Chemistry Books ⚗️</h2>
       </div>
       <div class="scroller-grid">
         <!-- chem book 1 -->
-        <a href="listing.php?tupleID=1" class="book-cont">
+        <a href="listing.php?tupleID=7" class="book-cont">
           <img src="./uploads/fchem.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $275<br>Condition: Fair</p>
@@ -277,7 +282,7 @@
           </div>
         </a>
         <!-- chem book 2 -->
-        <a href="listing.php?tupleID=2" class="book-cont">
+        <a href="listing.php?tupleID=8" class="book-cont">
           <img src="./uploads/ochem.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $600<br>Condition: Excellent</p>
@@ -285,7 +290,7 @@
           </div>
         </a>
         <!-- chem book 3 -->
-        <a href="listing.php?tupleID=3" class="book-cont">
+        <a href="listing.php?tupleID=9" class="book-cont">
           <img src="./uploads/bchem.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $350<br>Condition: Good</p>
@@ -293,7 +298,7 @@
           </div>
         </a>
         <!-- chem book 4 -->
-        <a href="listing.php?tupleID=4" class="book-cont">
+        <a href="listing.php?tupleID=10" class="book-cont">
           <img src="./uploads/chem book.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $828<br>Condition: Good</p>
@@ -304,11 +309,12 @@
 
     <div class="list-section">
       <div class="list-title">
-        <h2>🌎 Popular Geology Books 🌍</h2>
+        <h2 class="desktopTitle">🌎 Popular Geology Books 🌍</h2>
+        <h2 class="mobileTitle">🌎 Geology Books 🌍</h2>
       </div>
       <div class="scroller-grid">
         <!-- geo book 1 -->
-        <a href="listing.php?tupleID=9" class="book-cont">
+        <a href="listing.php?tupleID=15" class="book-cont hiddenMobile">
           <img src="./uploads/51e7lVxA-ZL._SL500_.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $123<br>Condition: Poor</p>
@@ -316,7 +322,7 @@
           </div>
         </a>
         <!-- geo book 2 -->
-        <a href="listing.php?tupleID=10" class="book-cont">
+        <a href="listing.php?tupleID=16" class="book-cont hiddenMobile">
           <img src="./uploads/51el5oz411L.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $452<br>Condition: Excellent</p>
@@ -324,7 +330,7 @@
           </div>
         </a>
         <!-- geo book 3 -->
-        <a href="listing.php?tupleID=11" class="book-cont">
+        <a href="listing.php?tupleID=17" class="book-cont">
           <img src="./uploads/613OsdBOPXL.jpg" alt="image">
           <div class="listing-info">
             <p>Price: $253452<br>Condition: Very Poor</p>
@@ -332,7 +338,7 @@
           </div>
         </a>
         <!-- geo book 4 -->
-        <a href="listing.php?tupleID=12" class="book-cont">
+        <a href="listing.php?tupleID=18" class="book-cont">
           <img src="./uploads/9780393667523_300.jpeg" alt="image">
           <div class="listing-info">
             <p>Price: $34343<br>Condition: Poor</p>

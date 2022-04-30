@@ -299,3 +299,7 @@ rgba(0, 0, 0, 0.2);
   min-height: 455px;
   width: 619px;
 }
+
+@media screen and (max-width: 768px){
+  
+}

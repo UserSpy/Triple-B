@@ -20,7 +20,7 @@
       <div class ="container">
         <a href="index.php" class="nav-left"><h1>Buy Borrow Books</h1></a>
           <ul class="nav-right">
-            <li class="item"><a href="browse.html"  ><ion-icon name="search-outline"></ion-icon></a></li>
+            <li class="item"><a href="browse.php"  ><ion-icon name="search-outline"></ion-icon></a></li>
             <!-- Sign Out / Log In Logic -->
             <?php 
               $sqlLoggedIn = "SELECT * FROM users";

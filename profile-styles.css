@@ -81,3 +81,38 @@ h3 {
   text-align: left;
   padding-bottom: 40px;
 }
+
+@media screen and (max-width: 768px){
+
+  .icon-image {
+  display:none;
+  }
+  .three-cards {
+    display: flex;
+    flex-direction: column;
+    padding: none;
+    background-color: lightblue;
+  }
+  .card {
+    background-color: white;
+    width: 320px;
+    height: 140px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 0px;
+  }
+
+  .card-headings h2{
+    font-size: 12px;
+    color: Orange;
+    margin-left: 0px;
+  }
+
+  .card-list {
+    list-style-type: none;
+    font-size: 12px;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+}
